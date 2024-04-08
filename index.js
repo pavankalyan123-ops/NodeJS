@@ -6,9 +6,7 @@ app.get("/users",(req,res)=>{
     res.send(sampleData)
 })
 
-app.get("/users/:id",(req,res)=>{
-    
-})
+
 app.listen(3000,(req,res)=>{
     
     console.log("port is running in 3000")
