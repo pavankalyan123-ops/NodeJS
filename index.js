@@ -3,11 +3,11 @@ import sampleData from './usersList';
 const app=express();
 
 app.get("/users",(req,res)=>{
-    res.send(sampleData)
+    res.send({name:"pavan"})
 })
 
-app.get("/users/:id",(req,res)=>{})
-app.listen(3000,(req,res)=>{
+
+app.listen(5000,(req,res)=>{
     
-    console.log("port is running in 3000")
+    console.log("port is running in 5000")
 })
