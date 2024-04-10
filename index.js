@@ -1,9 +1,10 @@
 const express=require('express');
-import sampleData from './usersList';
+//import sampleData from './usersList';
+const sampleData=require('./usersList')
 const app=express();
 
 app.get("/users",(req,res)=>{
-    res.send({name:"pavan"})
+    res.send(sampleData)
 })
 
 

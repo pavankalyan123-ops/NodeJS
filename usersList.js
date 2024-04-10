@@ -6,4 +6,6 @@ const sampleData = [
     { id: 5, name: "David Brown", email: "david@example.com", age: 40 },
   ];
   
-  export default sampleData;
+ // export default sampleData;
+
+ module.exports=sampleData;
