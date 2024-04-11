@@ -4,7 +4,7 @@ const sampleData=require('./usersList')
 const app=express();
 
 app.get("/users",(req,res)=>{
-    res.send(sampleData)
+    res.json(sampleData)
 })
 
 app.get("/users/:id",(req,res)=>{
@@ -16,6 +16,17 @@ app.get("/users/:id",(req,res)=>{
         res.status(404).json({ error: "This ID does not exist" });
     }
 })
+app.post("/users",(req,res)=>{
+    const newuser={
+        id:6,
+        name:"pavan",
+        email:"pavan@gmail.com",
+        age:27
+    }
+    sampleData.push(newuser);
+    res.json(sampleData)
+})
+
 app.listen(5000,(req,res)=>{
     
     console.log("port is running in 5000")
