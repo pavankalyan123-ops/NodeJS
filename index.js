@@ -17,14 +17,7 @@ app.get("/users/:id",(req,res)=>{
     }
 })
 app.post("/users",(req,res)=>{
-    const newuser={
-        id:6,
-        name:"pavan",
-        email:"pavan@gmail.com",
-        age:27
-    }
-    sampleData.push(newuser);
-    res.json(sampleData)
+    
 })
 
 app.listen(5000,(req,res)=>{
