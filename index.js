@@ -16,9 +16,7 @@ app.get("/users/:id",(req,res)=>{
         res.status(404).json({ error: "This ID does not exist" });
     }
 })
-app.post("/users",(req,res)=>{
-    
-})
+
 
 app.listen(5000,(req,res)=>{
     
