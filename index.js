@@ -17,6 +17,9 @@ app.get("/users/:id",(req,res)=>{
     }
 })
 
+app.get("/users/?search=name",(req,res)=>{
+    res.send(req.query)
+})
 
 app.listen(5000,(req,res)=>{
     
