@@ -4,6 +4,7 @@ const sampleData=require('./usersList')
 const app=express();
 
 app.get("/users",(req,res)=>{
+    console.log(req.query)
     res.json(sampleData)
 })
 
@@ -17,9 +18,7 @@ app.get("/users/:id",(req,res)=>{
     }
 })
 
-app.get("/users/?search=name",(req,res)=>{
-    res.send(req.query)
-})
+
 
 app.listen(5000,(req,res)=>{
     
