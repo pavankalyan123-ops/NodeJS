@@ -22,17 +22,18 @@ app.get("/users", (req, res) => {
 });
 
 app.post("/users",(req,res)=>{
-    
+
 })
 
 app.get("/users/:id",(req,res)=>{
-    const id=req.params.id;
-    const data=sampleData.filter(d=>d.id==id);
-    if(data!==undefined){
-        res.json(data)
-    }else{
-        res.status(404).json({ error: "This ID does not exist" });
+    const data=sampleData.find(d=>d.id===parseInt(req.params.id));
+    console.log(data);
+    console.log(!data)
+    if(!data)
+    {
+        res.status(404).send({error:"id is not found that you entered"})
     }
+   res.send(data)
 })
 
 
