@@ -21,6 +21,9 @@ app.get("/users", (req, res) => {
     res.json(data);
 });
 
+app.post("/users",(req,res)=>{
+    
+})
 
 app.get("/users/:id",(req,res)=>{
     const id=req.params.id;
