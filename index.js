@@ -13,12 +13,16 @@ const app=express();
 // })
 
 app.get("/users", (req, res) => {
-    let data = sampleData;
+    let data=sampleData;
     if (Object.keys(req.query).length > 0 && req.query.search) {
         let searchValue = req.query.search.toLowerCase();
         data = sampleData.filter(d => d.name.toLowerCase().includes(searchValue));
+        if(!data)
+        {
+            res.status(404).send("search value could not find")
+        }
     }
-    res.json(data);
+    res.send(data);
 });
 
 app.post("/users",(req,res)=>{
