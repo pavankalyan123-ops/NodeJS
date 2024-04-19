@@ -25,9 +25,7 @@ app.get("/users", (req, res) => {
     res.send(data);
 });
 
-app.post("/users",(req,res)=>{
 
-})
 
 app.get("/users/:id",(req,res)=>{
     const data=sampleData.find(d=>d.id===parseInt(req.params.id));
